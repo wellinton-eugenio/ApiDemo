@@ -24,6 +24,7 @@ namespace primeiroProjeto
                 );
 
            builder.Services.AddScoped<IUserRepository, UserRepository>();
+           builder.Services.AddScoped<ITodoRepository, ToDoRepository>();
 
             var app = builder.Build();
 

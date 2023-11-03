@@ -12,6 +12,9 @@ namespace primeiroProjeto.Data.Map
             builder.Property(x => x.Name).IsRequired().HasMaxLength(255).HasColumnType("text");
             builder.Property(x => x.Description).HasMaxLength(1500).HasColumnType("text");
             builder.Property(x => x.Status);
+            builder.Property(x => x.UserId);
+
+            builder.HasOne(x => x.User);
         }
 
     }
