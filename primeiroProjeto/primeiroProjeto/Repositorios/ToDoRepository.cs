@@ -24,7 +24,7 @@ namespace primeiroProjeto.Repositorios
         {
             return await _dbContext.ToDo
                 .Include(x => x.User)
-                .FirstOrDefaultAsync(x => x.Id == Id);w
+                .FirstOrDefaultAsync(x => x.Id == Id);
         }
         public async Task<ToDoModel> AddToDo(ToDoModel ToDo)
         {
